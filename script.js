@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
 
 // === Scroll fade-in animation ===
 const fadeEls = document.querySelectorAll(
-    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card, .info-item'
+    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card, .info-item, .about-portrait, .edu-gallery, .tl-image'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-up'));
