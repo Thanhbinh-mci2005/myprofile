@@ -379,63 +379,121 @@ img { max-width: 100%; display: block; }
 .footer-links a:hover { border-color: var(--primary); color: var(--primary); }
 .footer-copy { font-size: 0.78rem; color: var(--text-secondary); text-align: center; }
 
-/* === IMAGE INTEGRATIONS === */
+/* === IMAGE INTEGRATIONS (Polished) === */
 
-/* About portrait */
-.about-portrait {
-    margin-bottom: 24px; border-radius: var(--radius); overflow: hidden;
-    border: 1px solid var(--border); max-height: 320px;
+/* -- Shared image treatment -- */
+.about-portrait img,
+.ach-image img,
+.proj-visual.has-img img,
+.act-gallery-main,
+.act-gallery-thumbs img,
+.edu-gallery img,
+.tl-image-wrap img {
+    display: block; width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.about-portrait img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Education gallery in about-side */
+/* -- About portrait -- */
+.about-portrait {
+    position: relative; margin-bottom: 28px; border-radius: var(--radius);
+    overflow: hidden; border: 1px solid var(--border);
+    height: 280px;
+}
+.about-portrait-overlay {
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to top, var(--bg) 0%, transparent 40%);
+    opacity: 0.6;
+}
+.about-portrait:hover img { transform: scale(1.03); }
+
+/* -- Education gallery -- */
 .edu-gallery {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin-top: 16px; margin-bottom: 16px;
 }
 .edu-gallery img {
-    width: 100%; height: 140px; object-fit: cover; border-radius: var(--radius-sm);
-    border: 1px solid var(--border); transition: all var(--transition);
-}
-.edu-gallery img:hover { border-color: var(--primary); transform: scale(1.02); }
-
-/* Timeline image (Bycamcam growth data) */
-.tl-image {
-    margin-top: 16px; border-radius: var(--radius-sm); overflow: hidden;
-    border: 1px solid var(--border); background: var(--bg);
-}
-.tl-image img { width: 100%; display: block; }
-.tl-image-caption {
-    display: flex; align-items: center; gap: 6px;
-    padding: 8px 14px; font-size: 0.75rem; color: var(--text-secondary);
-    background: var(--surface); border-top: 1px solid var(--border);
-}
-.tl-image-caption i { color: var(--primary); font-size: 0.7rem; }
-
-/* Achievement card images */
-.ach-image {
-    margin: -28px -28px 16px -28px; height: 180px; overflow: hidden;
-    border-bottom: 1px solid var(--border);
-}
-.ach-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-.ach-card:hover .ach-image img { transform: scale(1.05); }
-
-/* Project card images */
-.proj-visual.has-img { padding: 0; height: 180px; overflow: hidden; }
-.proj-visual.has-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-.proj-card:hover .proj-visual.has-img img { transform: scale(1.05); }
-
-/* Activity featured layout with gallery */
-.act-featured-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-.act-gallery-main {
-    width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm);
+    height: 160px; border-radius: var(--radius-sm);
     border: 1px solid var(--border);
 }
-.act-gallery-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; }
-.act-gallery-thumbs img {
-    width: 100%; height: 80px; object-fit: cover; border-radius: var(--radius-xs);
-    border: 1px solid var(--border); transition: all var(--transition); cursor: pointer;
+.edu-gallery img:hover {
+    border-color: var(--primary);
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(108,99,255,0.1);
 }
-.act-gallery-thumbs img:hover { border-color: var(--primary); transform: scale(1.04); }
+
+/* -- Timeline data image -- */
+.tl-image {
+    margin-top: 20px; margin-bottom: 4px;
+    border-radius: var(--radius-sm); overflow: hidden;
+    border: 1px solid var(--border); background: #fff;
+}
+.tl-image-wrap {
+    padding: 8px; background: #fff;
+}
+.tl-image-wrap img { height: auto; object-fit: contain; border-radius: 4px; }
+.tl-image-caption {
+    display: flex; align-items: center; gap: 6px;
+    padding: 10px 14px; font-size: 0.75rem; font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--surface); border-top: 1px solid var(--border);
+}
+.tl-image-caption i { color: var(--primary); font-size: 0.72rem; }
+
+/* -- Achievement card images -- */
+.ach-has-img { padding: 0; overflow: hidden; }
+.ach-has-img .ach-body { padding: 24px 28px 28px; }
+.ach-image {
+    position: relative; height: 190px; overflow: hidden;
+}
+.ach-image-overlay {
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to top, rgba(22,22,42,0.85) 0%, rgba(22,22,42,0.1) 60%, transparent 100%);
+}
+.ach-card:hover .ach-image img { transform: scale(1.06); }
+/* Cards without images keep original padding */
+.ach-card:not(.ach-has-img) .ach-body { padding: 0; }
+/* Gold card top-bar adjustments */
+.ach-has-img::before { z-index: 1; }
+
+/* -- Project card images -- */
+.proj-visual.has-img {
+    position: relative; padding: 0; height: 190px; overflow: hidden;
+}
+.proj-img-overlay {
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to top, var(--surface) 0%, transparent 50%);
+    opacity: 0.5;
+}
+.proj-card:hover .proj-visual.has-img img { transform: scale(1.06); }
+
+/* -- Activity gallery -- */
+.act-featured-layout {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 32px; align-items: center;
+}
+.act-gallery { display: flex; flex-direction: column; gap: 10px; }
+.act-gallery-main {
+    height: 220px; border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color var(--transition);
+}
+.act-gallery-main:hover {
+    border-color: var(--primary);
+    transform: scale(1.02);
+}
+.act-gallery-thumbs {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+}
+.act-gallery-thumbs img {
+    height: 90px; border-radius: var(--radius-xs);
+    border: 1px solid var(--border); cursor: pointer;
+}
+.act-gallery-thumbs img:hover {
+    border-color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(108,99,255,0.12);
+}
 
 /* === ANIMATIONS === */
 .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -463,15 +521,18 @@ img { max-width: 100%; display: block; }
     .metric-value { font-size: 1.4rem; }
 
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-portrait { height: 240px; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .achievements-grid { grid-template-columns: 1fr; }
+    .ach-image { height: 200px; }
     .projects-grid { grid-template-columns: 1fr; }
+    .proj-visual.has-img { height: 200px; }
     .act-row { grid-template-columns: 1fr; }
-    .act-featured-layout { grid-template-columns: 1fr; }
+    .act-featured-layout { grid-template-columns: 1fr; gap: 24px; }
+    .act-gallery-main { height: 200px; }
     .contact-layout { grid-template-columns: 1fr; gap: 40px; }
     .tl-header { flex-direction: column; }
     .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
-    .ach-image { height: 160px; }
 }
 
 @media (max-width: 480px) {
@@ -485,4 +546,10 @@ img { max-width: 100%; display: block; }
     .form-row { grid-template-columns: 1fr; }
     .cert-row { flex-direction: column; }
     .section { padding: 70px 0; }
+    .about-portrait { height: 200px; }
+    .ach-image { height: 160px; }
+    .proj-visual.has-img { height: 160px; }
+    .edu-gallery img { height: 120px; }
+    .act-gallery-main { height: 180px; }
+    .act-gallery-thumbs img { height: 75px; }
 }
