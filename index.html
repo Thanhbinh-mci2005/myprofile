@@ -3,221 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh Binh - Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Đỗ Thanh Bình | E-Commerce & Digital Business</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">TB</a>
-            <ul class="nav-links">
-                <li><a href="#about">Giới thiệu</a></li>
-                <li><a href="#skills">Kỹ năng</a></li>
-                <li><a href="#projects">Dự án</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
+            <a href="#" class="nav-logo">TB<span class="logo-dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow"></div>
         <div class="hero-content">
-            <p class="hero-greeting">Xin chào, mình là</p>
-            <h1 class="hero-name">Thanh Binh</h1>
-            <p class="hero-title">Web Developer</p>
-            <p class="hero-desc">Đam mê xây dựng những sản phẩm web đẹp, hiệu quả và thân thiện với người dùng.</p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">Liên hệ với mình</a>
-                <a href="#projects" class="btn btn-outline">Xem dự án</a>
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    E-Commerce &amp; Digital Business
+                </div>
+                <h1 class="hero-name">
+                    <span class="line">Đỗ Thanh</span>
+                    <span class="line accent">Bình</span>
+                </h1>
+                <p class="hero-tagline">E-Commerce Operations &bull; Data-Driven Strategy &bull; Startup Champion</p>
+                <p class="hero-desc">Sinh viên Quản trị Kinh doanh số tại Đại học Kinh tế Quốc dân, định hướng phát triển trong lĩnh vực thương mại điện tử và phân tích dữ liệu.</p>
+
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <span class="metric-value" data-count="3.88">0</span>
+                        <span class="metric-label">GPA / 4.0</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric">
+                        <span class="metric-value">2+</span>
+                        <span class="metric-label">Năm kinh nghiệm</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric">
+                        <span class="metric-value">50+</span>
+                        <span class="metric-label">Sellers hỗ trợ</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary"><span>Liên hệ</span><i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-glass"><span>Tìm hiểu thêm</span><i class="fas fa-chevron-down"></i></a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="mailto:tbinh.cc@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:0352430981" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                </div>
             </div>
-            <div class="hero-socials">
-                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="avatar-wrapper">
-                <div class="avatar-placeholder">
-                    <i class="fas fa-user"></i>
+
+            <div class="hero-visual">
+                <div class="hero-card-stack">
+                    <div class="floating-card fc-1"><i class="fas fa-trophy"></i><span>I-STARTUP Champion</span></div>
+                    <div class="floating-card fc-2"><i class="fas fa-graduation-cap"></i><span>GPA 3.88</span></div>
+                    <div class="floating-card fc-3"><i class="fas fa-chart-line"></i><span>+24.99% Growth</span></div>
+                    <div class="avatar-ring">
+                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
     </section>
 
-    <!-- About Section -->
+    <!-- ==================== ABOUT ==================== -->
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">Giới thiệu</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Mình là một lập trình viên web với niềm đam mê tạo ra những trải nghiệm kỹ thuật số tuyệt vời. Mình luôn tìm tòi và học hỏi những công nghệ mới để nâng cao kỹ năng của bản thân.</p>
-                    <p>Khi không code, mình thích đọc sách, nghe nhạc và khám phá những điều mới mẻ trong cuộc sống.</p>
+            <div class="section-header">
+                <span class="section-tag">01 &mdash; About</span>
+                <h2 class="section-title">Giới thiệu</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-main">
+                    <p class="about-lead">Mình là <strong>Đỗ Thanh Bình</strong>, sinh viên ngành Quản trị Kinh doanh số tại Đại học Kinh tế Quốc dân (NEU).</p>
+                    <p>Với hơn 2 năm kinh nghiệm trong lĩnh vực Thương mại điện tử, mình đã làm việc tại Everred Group và Meta Ecom Group &mdash; chuyên vận hành sàn Shopee, TikTok Shop và xây dựng chiến lược tăng trưởng dựa trên dữ liệu.</p>
+                    <p>Mình định hướng phát triển sâu trong e-commerce operations và data analytics, luôn tìm kiếm cơ hội để tạo ra giá trị thực tế thông qua kinh doanh số.</p>
+
+                    <div class="info-grid">
+                        <div class="info-item"><span class="info-label">Ngày sinh</span><span class="info-value">20/06/2005</span></div>
+                        <div class="info-item"><span class="info-label">Email</span><span class="info-value">tbinh.cc@gmail.com</span></div>
+                        <div class="info-item"><span class="info-label">Địa chỉ</span><span class="info-value">Bạch Mai, Hà Nội</span></div>
+                        <div class="info-item"><span class="info-label">SĐT</span><span class="info-value">035-243-0981</span></div>
+                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="stat-number">2+</span>
-                        <span class="stat-label">Năm kinh nghiệm</span>
+
+                <div class="about-side">
+                    <!-- Education Cards -->
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="edu-body">
+                            <h3>ĐH Kinh tế Quốc dân</h3>
+                            <p class="edu-major">Quản trị Kinh doanh số</p>
+                            <p class="edu-detail">GPA: 3.88/4.0 &bull; 2023 &ndash; 2027</p>
+                            <span class="edu-badge">Học bổng Xuất sắc &amp; Giỏi</span>
+                        </div>
                     </div>
-                    <div class="stat-card">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Dự án hoàn thành</span>
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <div class="edu-body">
+                            <h3>THPT Chuyên Trần Phú</h3>
+                            <p class="edu-detail">2020 &ndash; 2023</p>
+                        </div>
                     </div>
-                    <div class="stat-card">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Công nghệ sử dụng</span>
+
+                    <!-- Certificates -->
+                    <div class="cert-row">
+                        <div class="cert-chip"><i class="fas fa-language"></i><div><span class="cert-name">IELTS</span><span class="cert-score">6.0</span></div></div>
+                        <div class="cert-chip"><i class="fas fa-file-excel"></i><div><span class="cert-name">MOS Excel</span><span class="cert-score">871</span></div></div>
+                        <div class="cert-chip"><i class="fas fa-file-word"></i><div><span class="cert-name">MOS Word</span><span class="cert-score">962</span></div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ==================== SKILLS ==================== -->
     <section class="section section-alt" id="skills">
         <div class="container">
-            <h2 class="section-title">Kỹ năng</h2>
+            <div class="section-header">
+                <span class="section-tag">02 &mdash; Skills</span>
+                <h2 class="section-title">Kỹ năng</h2>
+            </div>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                    <h3>HTML5</h3>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                    <div class="skill-icon"><i class="fas fa-store"></i></div>
+                    <h3>E-Commerce Operations</h3>
+                    <p>Vận hành gian hàng Shopee, TikTok Shop. Quản lý sản phẩm, giá, khuyến mãi, quảng cáo.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                    <h3>CSS3</h3>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Data-Driven Decision</h3>
+                    <p>Phân tích chỉ số kinh doanh, xây dựng hệ thống dữ liệu tự động, ra quyết định dựa trên data.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fab fa-js"></i></div>
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                    <div class="skill-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Digital Marketing</h3>
+                    <p>Chạy quảng cáo, booking KOL/KOC, tổ chức Mega Livestream và Super Day Livestream.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fab fa-react"></i></div>
-                    <h3>React</h3>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                    <div class="skill-icon"><i class="fas fa-users"></i></div>
+                    <h3>Team Leadership</h3>
+                    <p>Trưởng nhóm vận hành, phó chủ nhiệm CLB, leader ban sự kiện các cuộc thi quy mô lớn.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-                    <h3>Node.js</h3>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+                    <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Business Planning</h3>
+                    <p>Xây dựng mô hình kinh doanh B2B, D2C, B2C. Lên kế hoạch và triển khai startup.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
-                    <h3>Git</h3>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                    <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+                    <h3>Office &amp; Tools</h3>
+                    <p>MOS Excel (871), MOS Word (962). Thành thạo công cụ bán hàng và hỗ trợ seller.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 &mdash; Experience</span>
+                <h2 class="section-title">Kinh nghiệm</h2>
+            </div>
+            <div class="timeline">
+                <!-- Everred Group -->
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>E-Commerce Operation Team Leader</h3>
+                                <p class="tl-company"><i class="fas fa-building"></i> Everred Group &mdash; Thương hiệu BYCAMCAM</p>
+                            </div>
+                            <span class="tl-date">06/2025 &ndash; 04/2026</span>
+                        </div>
+                        <ul class="tl-list">
+                            <li>Quản lý vận hành: đặt hàng, tối ưu nguồn hàng, đăng tải sản phẩm, giá, khuyến mãi, quảng cáo</li>
+                            <li>Làm việc với BD Shopee &amp; TikTok Shop để khai thác cơ hội tăng trưởng</li>
+                            <li>Xây dựng hệ thống dữ liệu tự động &rarr; giảm thao tác thủ công, tăng tốc độ báo cáo</li>
+                            <li>Ra quyết định dựa trên dữ liệu, theo dõi hiệu suất theo chỉ số</li>
+                        </ul>
+                        <div class="tl-results">
+                            <div class="result-chip"><i class="fas fa-arrow-trend-up"></i> Q4/2025: ~11% tăng trưởng</div>
+                            <div class="result-chip highlight"><i class="fas fa-rocket"></i> Q1/2026: +24.99% Shopee</div>
+                            <div class="result-chip"><i class="fas fa-arrow-trend-up"></i> Q1/2026: +18.03% TikTok Shop</div>
+                        </div>
+                        <div class="tl-tags">
+                            <span>Shopee</span><span>TikTok Shop</span><span>Data Analytics</span><span>Team Lead</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meta Ecom Group -->
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>E-Commerce Specialist</h3>
+                                <p class="tl-company"><i class="fas fa-building"></i> Meta Ecom Group</p>
+                            </div>
+                            <span class="tl-date">05/2024 &ndash; 04/2025</span>
+                        </div>
+                        <ul class="tl-list">
+                            <li>Hỗ trợ 50+ nhà bán hàng TikTok Shop về chính sách sàn</li>
+                            <li>Kháng cáo vi phạm, đăng ký Key Livestream cho seller</li>
+                            <li>Booking và làm việc với KOL/KOC</li>
+                            <li>Xây dựng và tối ưu vận hành gian hàng</li>
+                            <li>Tổ chức Mega Livestream, Super Day Livestream</li>
+                        </ul>
+                        <div class="tl-tags">
+                            <span>TikTok Shop Partner</span><span>KOL/KOC</span><span>Livestream</span><span>Seller Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS ==================== -->
+    <section class="section section-alt" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 &mdash; Achievements</span>
+                <h2 class="section-title">Thành tích</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="ach-card ach-gold">
+                    <div class="ach-rank"><i class="fas fa-trophy"></i><span>Quán quân</span></div>
+                    <h3>I-STARTUP 2025</h3>
+                    <p class="ach-org">Liên Chi Hội Khoa Đầu Tư &mdash; ĐH Kinh tế Quốc dân</p>
+                    <ul>
+                        <li>Dự án RePaws &mdash; pet care từ vỏ dứa</li>
+                        <li>Xây dựng mô hình B2B, D2C, B2C</li>
+                        <li>Test sản phẩm bằng TikTok Shop</li>
+                    </ul>
+                    <span class="ach-date">05/2025</span>
+                </div>
+
+                <div class="ach-card">
+                    <div class="ach-rank"><i class="fas fa-medal"></i><span>Quý quân</span></div>
+                    <h3>The E-Biz 2023</h3>
+                    <p class="ach-org">Cuộc thi Đột phá Kinh doanh</p>
+                    <ul>
+                        <li>Lên kế hoạch kinh doanh mỹ phẩm trên Lazada</li>
+                        <li>Mở gian hàng, vận hành và tối ưu Shop</li>
+                    </ul>
+                    <span class="ach-date">03/2024</span>
+                </div>
+
+                <div class="ach-card">
+                    <div class="ach-rank"><i class="fas fa-award"></i><span>Khuyến khích</span></div>
+                    <h3>Kinh doanh số &mdash; VECOM</h3>
+                    <p class="ach-org">Hiệp hội TMĐT Việt Nam</p>
+                    <ul>
+                        <li>Bảng Bán hàng Online</li>
+                        <li>Kinh doanh mỹ phẩm trên sàn Lazada</li>
+                    </ul>
+                    <span class="ach-date">03/2024</span>
+                </div>
+
+                <div class="ach-card ach-scholarship">
+                    <div class="ach-rank"><i class="fas fa-star"></i><span>Học bổng</span></div>
+                    <h3>Học bổng Học tập</h3>
+                    <p class="ach-org">Viện Quản trị Kinh doanh &mdash; ĐH KTQD</p>
+                    <ul>
+                        <li>Xuất sắc (2023 &ndash; 2024)</li>
+                        <li>Giỏi (2024 &ndash; 2025)</li>
+                    </ul>
+                    <span class="ach-date">2023 &ndash; 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
     <section class="section" id="projects">
         <div class="container">
-            <h2 class="section-title">Dự án</h2>
+            <div class="section-header">
+                <span class="section-tag">05 &mdash; Projects</span>
+                <h2 class="section-title">Dự án</h2>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>E-Commerce Website</h3>
-                        <p>Website bán hàng trực tuyến với giỏ hàng, thanh toán và quản lý sản phẩm.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                <div class="proj-card">
+                    <div class="proj-visual"><i class="fas fa-microscope"></i></div>
+                    <div class="proj-body">
+                        <span class="proj-category">Research</span>
+                        <h3>Nghiên cứu khoa học cấp Đại học</h3>
+                        <p>Đề tài: Ảnh hưởng của Thương mại điện tử đến hành vi mua sắm ngẫu hứng của hộ gia đình trẻ tại Việt Nam.</p>
+                        <div class="proj-meta"><i class="far fa-calendar"></i> 10/2024 &ndash; 10/2025</div>
+                        <div class="proj-tags"><span>NCKH</span><span>E-Commerce</span><span>Consumer Behavior</span></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Task Manager App</h3>
-                        <p>Ứng dụng quản lý công việc với tính năng kéo thả và thông báo.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>CSS3</span>
-                            <span>LocalStorage</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> Code</a>
-                        </div>
+
+                <div class="proj-card">
+                    <div class="proj-visual"><i class="fas fa-heart"></i></div>
+                    <div class="proj-body">
+                        <span class="proj-category">Community</span>
+                        <h3>Givelove &mdash; Hỗ trợ bão Yagi</h3>
+                        <p>Xây dựng website kêu gọi ủng hộ người dân chịu ảnh hưởng của bão Yagi. Dự án mang ý nghĩa cộng đồng sâu sắc.</p>
+                        <div class="proj-meta"><i class="far fa-calendar"></i> 08/2024 &ndash; 10/2024</div>
+                        <div class="proj-tags"><span>Website</span><span>Cộng đồng</span><span>Bão Yagi</span></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-cloud-sun"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Weather Dashboard</h3>
-                        <p>Dashboard thời tiết real-time với biểu đồ và dự báo 7 ngày.</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>API</span>
-                            <span>Chart.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> Code</a>
-                        </div>
+
+                <div class="proj-card">
+                    <div class="proj-visual"><i class="fas fa-paw"></i></div>
+                    <div class="proj-body">
+                        <span class="proj-category">Startup</span>
+                        <h3>RePaws &mdash; Pet Care bền vững</h3>
+                        <p>Thương hiệu chăm sóc thú cưng từ vỏ dứa. Mô hình kinh doanh B2B, D2C, B2C. Quán quân I-STARTUP 2025.</p>
+                        <div class="proj-meta"><i class="far fa-calendar"></i> 2025</div>
+                        <div class="proj-tags"><span>Startup</span><span>TikTok Shop</span><span>B2B/D2C/B2C</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section section-alt" id="contact">
+    <!-- ==================== ACTIVITIES ==================== -->
+    <section class="section section-alt" id="activities">
         <div class="container">
-            <h2 class="section-title">Liên hệ</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>Bạn có dự án thú vị hoặc muốn hợp tác? Hãy liên hệ với mình nhé!</p>
-                    <div class="contact-items">
-                        <div class="contact-item">
+            <div class="section-header">
+                <span class="section-tag">06 &mdash; Leadership</span>
+                <h2 class="section-title">Hoạt động</h2>
+            </div>
+            <div class="activities-list">
+                <div class="act-card act-featured">
+                    <div class="act-badge">Phó Chủ nhiệm CLB</div>
+                    <h3>CLB Thương mại điện tử ECC &mdash; NEU</h3>
+                    <p class="act-org">Bảo trợ bởi Viện TM&amp;KTQT &mdash; ĐH KTQD và Hiệp hội TMĐT Việt Nam VECOM</p>
+                    <p class="act-period"><i class="far fa-calendar"></i> 10/2024 &ndash; 10/2025</p>
+                </div>
+
+                <div class="act-row">
+                    <div class="act-card">
+                        <div class="act-badge">Phó BTC</div>
+                        <h3>E-BattleField 2025</h3>
+                        <p>Cuộc thi TMĐT xuyên biên giới đầu tiên và lớn nhất miền Bắc</p>
+                    </div>
+                    <div class="act-card">
+                        <div class="act-badge">Phó BTC</div>
+                        <h3>E-Connect 2025</h3>
+                        <p>Chuỗi sự kiện kết nối cộng đồng E-Commerce</p>
+                    </div>
+                    <div class="act-card">
+                        <div class="act-badge">Leader Ban Sự kiện</div>
+                        <h3>Ecomathon SEA 2024</h3>
+                        <p>Cuộc thi do TikTok for Business, Meta Ecom và Ecomdy Media tổ chức</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">07 &mdash; Contact</span>
+                <h2 class="section-title">Liên hệ</h2>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-left">
+                    <p class="contact-intro">Bạn muốn hợp tác, trao đổi cơ hội hoặc kết nối? Mình luôn sẵn sàng lắng nghe!</p>
+                    <div class="contact-cards">
+                        <a href="mailto:tbinh.cc@gmail.com" class="ct-card">
                             <i class="fas fa-envelope"></i>
-                            <span>thanhbinh@example.com</span>
-                        </div>
-                        <div class="contact-item">
+                            <div><span class="ct-label">Email</span><span class="ct-value">tbinh.cc@gmail.com</span></div>
+                        </a>
+                        <a href="tel:0352430981" class="ct-card">
                             <i class="fas fa-phone"></i>
-                            <span>+84 xxx xxx xxx</span>
-                        </div>
-                        <div class="contact-item">
+                            <div><span class="ct-label">Điện thoại</span><span class="ct-value">035-243-0981</span></div>
+                        </a>
+                        <div class="ct-card">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Việt Nam</span>
+                            <div><span class="ct-label">Địa chỉ</span><span class="ct-value">Bạch Mai, Hà Nội</span></div>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <input type="text" placeholder="Họ và tên" required>
+                    <div class="form-row">
+                        <div class="form-group"><label>Họ và tên</label><input type="text" placeholder="Nguyễn Văn A" required></div>
+                        <div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com" required></div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Tin nhắn" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Gửi tin nhắn <i class="fas fa-paper-plane"></i></button>
+                    <div class="form-group"><label>Chủ đề</label><input type="text" placeholder="Hợp tác / Tuyển dụng / Khác"></div>
+                    <div class="form-group"><label>Tin nhắn</label><textarea placeholder="Nội dung tin nhắn..." rows="5" required></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-full"><span>Gửi tin nhắn</span><i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
@@ -226,7 +422,14 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Thanh Binh. All rights reserved.</p>
+            <div class="footer-inner">
+                <div class="footer-brand"><span class="footer-logo">TB<span class="logo-dot">.</span></span><p>Đỗ Thanh Bình &mdash; E-Commerce &amp; Digital Business</p></div>
+                <div class="footer-links">
+                    <a href="mailto:tbinh.cc@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:0352430981"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2026 Đỗ Thanh Bình. All rights reserved.</p>
         </div>
     </footer>
 

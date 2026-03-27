@@ -1,91 +1,68 @@
-// Mobile menu toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+// === Mobile Navigation ===
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    navToggle.classList.toggle('active');
 });
 
-// Close menu when clicking a link
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
     });
 });
 
-// Navbar background on scroll
-const navbar = document.querySelector('.navbar');
+// === Navbar scroll effect ===
+const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.borderBottomColor = 'var(--border)';
-    }
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Animate skill bars on scroll
-const skillFills = document.querySelectorAll('.skill-fill');
-const observerOptions = { threshold: 0.5 };
+// === Scroll fade-in animation ===
+const fadeEls = document.querySelectorAll(
+    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card, .info-item'
+);
 
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.width = entry.target.style.width;
-            skillObserver.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-skillFills.forEach(fill => {
-    const targetWidth = fill.style.width;
-    fill.style.width = '0%';
-    fill.dataset.target = targetWidth;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    fill.style.width = fill.dataset.target;
-                }, 200);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    observer.observe(fill);
-});
-
-// Fade-in animation on scroll
-const fadeElements = document.querySelectorAll('.skill-card, .project-card, .stat-card, .contact-item');
-
-fadeElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-});
+fadeEls.forEach(el => el.classList.add('fade-up'));
 
 const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, index * 100);
+            entry.target.classList.add('visible');
             fadeObserver.unobserve(entry.target);
         }
     });
 }, { threshold: 0.1 });
 
-fadeElements.forEach(el => fadeObserver.observe(el));
+fadeEls.forEach(el => fadeObserver.observe(el));
 
-// Contact form handler
+// === Active nav link on scroll ===
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + 100;
+    sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+        if (link) {
+            link.classList.toggle('active', scrollY >= top && scrollY < top + height);
+        }
+    });
+});
+
+// === Contact form handler ===
 function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
+    const original = btn.innerHTML;
     btn.innerHTML = '<i class="fas fa-check"></i> Đã gửi!';
-    btn.style.background = '#22c55e';
+    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
     setTimeout(() => {
-        btn.innerHTML = originalText;
+        btn.innerHTML = original;
         btn.style.background = '';
         e.target.reset();
-    }, 2000);
+    }, 2500);
 }
