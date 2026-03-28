@@ -213,6 +213,22 @@ img { max-width: 100%; display: block; }
     background: rgba(245,166,35,0.1); color: var(--gold); border: 1px solid rgba(245,166,35,0.2);
 }
 
+/* GPA Transcript Table */
+.gpa-table {
+    margin-top: 16px; margin-bottom: 16px; border-radius: var(--radius-sm);
+    overflow: hidden; border: 1px solid var(--border); background: #fff;
+}
+.gpa-table img {
+    width: 100%; display: block; padding: 4px; background: #fff;
+}
+.gpa-table-caption {
+    display: flex; align-items: center; gap: 6px;
+    padding: 10px 14px; font-size: 0.75rem; font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--surface); border-top: 1px solid var(--border);
+}
+.gpa-table-caption i { color: var(--primary); font-size: 0.72rem; }
+
 /* Cert Row */
 .cert-row { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
 .cert-chip {
