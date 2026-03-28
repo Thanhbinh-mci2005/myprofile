@@ -58,7 +58,7 @@ function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target.querySelector('button[type="submit"]');
     const original = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-check"></i> Đã gửi!';
+    btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
     btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
     setTimeout(() => {
         btn.innerHTML = original;
