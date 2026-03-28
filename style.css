@@ -137,30 +137,12 @@ img { max-width: 100%; display: block; }
 
 /* Hero Visual */
 .hero-visual { flex-shrink: 0; position: relative; }
-.hero-card-stack {
-    position: relative;
-    width: 360px;
-    height: 360px;
-}
-
+.hero-card-stack { position: relative; width: 360px; height: 360px; }
 .avatar-ring {
-    position: absolute;
-    top: 55%;
-    left: 52%;
-    transform: translate(-50%, -50%);
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 230px; height: 230px; border-radius: 50%;
     background: linear-gradient(135deg, var(--primary), var(--accent));
-    padding: 4px;
-}
-
-.avatar-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 55% 25%;
+    padding: 4px; z-index: 2;
 }
 .avatar-placeholder {
     width: 100%; height: 100%; border-radius: 50%; background: var(--surface);
@@ -168,25 +150,21 @@ img { max-width: 100%; display: block; }
     font-size: 4rem; color: rgba(108,99,255,0.4);
 }
 .avatar-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-}
+    width: 100%; height: 100%; border-radius: 50%;
+    object-fit: cover; object-position: center top;
 }
 .floating-card {
     position: absolute; display: flex; align-items: center; gap: 8px;
     padding: 10px 16px; border-radius: 12px;
     background: var(--surface); border: 1px solid var(--border);
     font-size: 0.78rem; font-weight: 600; color: var(--text);
-    box-shadow: var(--shadow); white-space: nowrap;
+    box-shadow: var(--shadow); white-space: nowrap; z-index: 3;
 }
 .floating-card i { color: var(--primary); font-size: 0.9rem; }
-.fc-1 { top: 10px; left: -10px; animation: float1 6s ease-in-out infinite; }
+.fc-1 { top: 0; left: -30px; animation: float1 6s ease-in-out infinite; }
 .fc-1 i { color: var(--gold); }
-.fc-2 { top: 40px; right: -20px; animation: float2 7s ease-in-out infinite; }
-.fc-3 { bottom: 30px; left: 0; animation: float3 5s ease-in-out infinite; }
+.fc-2 { top: 20px; right: -40px; animation: float2 7s ease-in-out infinite; }
+.fc-3 { bottom: 10px; left: -20px; animation: float3 5s ease-in-out infinite; }
 .fc-3 i { color: #22c55e; }
 @keyframes float1 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 @keyframes float2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
