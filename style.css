@@ -60,6 +60,23 @@ img { max-width: 100%; display: block; }
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+/* Language Toggle */
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.lang-toggle {
+    display: flex; align-items: center; padding: 3px;
+    border-radius: 50px; background: var(--surface); border: 1px solid var(--border);
+    cursor: pointer; transition: border-color var(--transition);
+}
+.lang-toggle:hover { border-color: var(--primary); }
+.lang-option {
+    padding: 4px 10px; border-radius: 50px; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.5px; color: var(--text-secondary); transition: all var(--transition);
+    line-height: 1;
+}
+.lang-option.active {
+    background: var(--primary); color: #fff;
+}
+
 /* === HERO === */
 .hero {
     position: relative; min-height: 100vh; display: flex; align-items: center;

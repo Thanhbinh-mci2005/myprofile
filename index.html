@@ -17,16 +17,22 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">TB<span class="logo-dot">.</span></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#achievements" data-i18n="nav.achievements">Achievements</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#activities" data-i18n="nav.activities">Activities</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="nav-right">
+                <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                    <span class="lang-option active" data-lang="en">EN</span>
+                    <span class="lang-option" data-lang="vi">VI</span>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -45,7 +51,7 @@
                     <span class="line accent">Bình</span>
                 </h1>
                 <p class="hero-tagline">E-Commerce Operations &bull; Data-Driven Strategy &bull; Startup Champion</p>
-                <p class="hero-desc">Digital Business Management student at National Economics University, passionate about e-commerce operations and data-driven strategy.</p>
+                <p class="hero-desc" data-i18n="hero.desc">Digital Business Management student at National Economics University, passionate about e-commerce operations and data-driven strategy.</p>
 
                 <div class="hero-metrics">
                     <div class="metric">
@@ -55,18 +61,18 @@
                     <div class="metric-divider"></div>
                     <div class="metric">
                         <span class="metric-value">2+</span>
-                        <span class="metric-label">Years of Experience</span>
+                        <span class="metric-label" data-i18n="hero.exp">Years of Experience</span>
                     </div>
                     <div class="metric-divider"></div>
                     <div class="metric">
                         <span class="metric-value">50+</span>
-                        <span class="metric-label">Sellers Supported</span>
+                        <span class="metric-label" data-i18n="hero.sellers">Sellers Supported</span>
                     </div>
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary"><span>Contact Me</span><i class="fas fa-arrow-right"></i></a>
-                    <a href="#about" class="btn btn-glass"><span>Learn More</span><i class="fas fa-chevron-down"></i></a>
+                    <a href="#contact" class="btn btn-primary"><span data-i18n="hero.contact">Contact Me</span><i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-glass"><span data-i18n="hero.learn">Learn More</span><i class="fas fa-chevron-down"></i></a>
                 </div>
 
                 <div class="hero-socials">
@@ -79,7 +85,7 @@
                 <div class="hero-card-stack">
                     <div class="floating-card fc-1"><i class="fas fa-trophy"></i><span>Digital Business</span></div>
                     <div class="floating-card fc-2"><i class="fas fa-graduation-cap"></i><span>GPA 3.88</span></div>
-                    <div class="floating-card fc-3"><i class="fas fa-chart-line"></i><span>I-startup Champion </span></div>
+                    <div class="floating-card fc-3"><i class="fas fa-chart-line"></i><span>I-startup Champion</span></div>
                     <div class="avatar-ring">
                         <img src="assets/hero-portrait.jpg" alt="Đỗ Thanh Bình" class="avatar-img">
                     </div>
@@ -94,7 +100,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">01 &mdash; About</span>
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-title" data-i18n="about.title">About Me</h2>
             </div>
             <div class="about-grid">
                 <div class="about-main">
@@ -102,43 +108,39 @@
                         <img src="assets/about-portrait.jpg" alt="Do Thanh Binh receiving research award at NEU">
                         <div class="about-portrait-overlay"></div>
                     </div>
-                    <p class="about-lead">I'm <strong>Do Thanh Binh</strong>, a Digital Business Management student at National Economics University (NEU), Hanoi.</p>
-                    <p>With over 2 years of experience in E-Commerce, I have worked at Everred Group and Meta Ecom Group &mdash; specializing in Shopee &amp; TikTok Shop operations and building data-driven growth strategies.</p>
-                    <p>I'm focused on deepening my expertise in e-commerce operations and data analytics, always seeking opportunities to create real value through digital business.</p>
+                    <p class="about-lead" data-i18n="about.lead">I'm <strong>Do Thanh Binh</strong>, a Digital Business Management student at National Economics University (NEU), Hanoi.</p>
+                    <p data-i18n="about.p1">With over 2 years of experience in E-Commerce, I have worked at Everred Group and Meta Ecom Group — specializing in Shopee & TikTok Shop operations and building data-driven growth strategies.</p>
+                    <p data-i18n="about.p2">I'm focused on deepening my expertise in e-commerce operations and data analytics, always seeking opportunities to create real value through digital business.</p>
                 </div>
 
                 <div class="about-side">
-                    <!-- Education Cards -->
                     <div class="edu-card">
                         <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div class="edu-body">
-                            <h3>National Economics University</h3>
-                            <p class="edu-major">Digital Business Management</p>
+                            <h3 data-i18n="edu.neu">National Economics University</h3>
+                            <p class="edu-major" data-i18n="edu.major">Digital Business Management</p>
                             <p class="edu-detail">GPA: 3.88/4.0 &bull; 2023 &ndash; 2027</p>
-                            <span class="edu-badge">Excellence &amp; Merit Scholarship</span>
+                            <span class="edu-badge" data-i18n="edu.scholarship">Excellence &amp; Merit Scholarship</span>
                         </div>
                     </div>
                     <div class="edu-card">
                         <div class="edu-icon"><i class="fas fa-school"></i></div>
                         <div class="edu-body">
-                            <h3>Tran Phu Gifted High School</h3>
+                            <h3 data-i18n="edu.hs">Tran Phu Gifted High School</h3>
                             <p class="edu-detail">2020 &ndash; 2023</p>
                         </div>
                     </div>
 
-                    <!-- Academic highlights -->
                     <div class="edu-gallery">
                         <img src="assets/edu-certificate.jpg" alt="Academic Excellence Certificate - NEU Business School">
                         <img src="assets/edu-outdoor.jpg" alt="Receiving academic achievement award">
                     </div>
 
-                    <!-- GPA Transcript -->
                     <div class="gpa-table">
                         <img src="assets/gpa-transcript.png" alt="Academic GPA Transcript - Cumulative GPA 3.88/4.0">
-                        <span class="gpa-table-caption"><i class="fas fa-graduation-cap"></i> Academic Transcript &mdash; Cumulative GPA: 3.88/4.0 (9.09/10)</span>
+                        <span class="gpa-table-caption"><i class="fas fa-graduation-cap"></i> <span data-i18n="edu.gpa_caption">Academic Transcript — Cumulative GPA: 3.88/4.0 (9.09/10)</span></span>
                     </div>
 
-                    <!-- Certificates -->
                     <div class="cert-row">
                         <div class="cert-chip"><i class="fas fa-language"></i><div><span class="cert-name">IELTS</span><span class="cert-score">6.0</span></div></div>
                         <div class="cert-chip"><i class="fas fa-file-excel"></i><div><span class="cert-name">MOS Excel</span><span class="cert-score">871</span></div></div>
@@ -154,38 +156,38 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">02 &mdash; Skills</span>
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title" data-i18n="skills.title">Skills</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-store"></i></div>
                     <h3>E-Commerce Operations</h3>
-                    <p>Managing Shopee &amp; TikTok Shop storefronts. Product listing, pricing, promotions, and advertising.</p>
+                    <p data-i18n="skills.ecom">Managing Shopee &amp; TikTok Shop storefronts. Product listing, pricing, promotions, and advertising.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
                     <h3>Data-Driven Decision</h3>
-                    <p>Analyzing business KPIs, building automated data systems, and making decisions backed by data.</p>
+                    <p data-i18n="skills.data">Analyzing business KPIs, building automated data systems, and making decisions backed by data.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-bullhorn"></i></div>
                     <h3>Digital Marketing</h3>
-                    <p>Running ads, booking KOL/KOC partnerships, organizing Mega Livestream and Super Day events.</p>
+                    <p data-i18n="skills.marketing">Running ads, booking KOL/KOC partnerships, organizing Mega Livestream and Super Day events.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-users"></i></div>
                     <h3>Team Leadership</h3>
-                    <p>Operations team leader, club vice president, and event lead for large-scale competitions.</p>
+                    <p data-i18n="skills.leadership">Operations team leader, club vice president, and event lead for large-scale competitions.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
                     <h3>Business Planning</h3>
-                    <p>Building B2B, D2C, and B2C business models. Planning and executing startup ventures.</p>
+                    <p data-i18n="skills.business">Building B2B, D2C, and B2C business models. Planning and executing startup ventures.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
                     <h3>Office &amp; Tools</h3>
-                    <p>MOS Excel (871), MOS Word (962). Proficient with e-commerce selling &amp; seller support tools.</p>
+                    <p data-i18n="skills.office">MOS Excel (871), MOS Word (962). Proficient with e-commerce selling &amp; seller support tools.</p>
                 </div>
             </div>
         </div>
@@ -196,28 +198,27 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">03 &mdash; Experience</span>
-                <h2 class="section-title">Experience</h2>
+                <h2 class="section-title" data-i18n="exp.title">Experience</h2>
             </div>
             <div class="timeline">
-                <!-- Everred Group -->
                 <div class="tl-item">
                     <div class="tl-dot"></div>
                     <div class="tl-card">
                         <div class="tl-header">
                             <div>
                                 <h3>E-Commerce Operation Team Leader</h3>
-                                <p class="tl-company"><i class="fas fa-building"></i> Everred Group &mdash; BYCAMCAM Brand</p>
+                                <p class="tl-company"><i class="fas fa-building"></i> <span data-i18n="exp.everred_brand">Everred Group — BYCAMCAM Brand</span></p>
                             </div>
                             <span class="tl-date">06/2025 &ndash; 04/2026</span>
                         </div>
                         <ul class="tl-list">
-                            <li>Managed full operations: ordering, supply optimization, product listing, pricing, promotions, and advertising</li>
-                            <li>Collaborated with Shopee &amp; TikTok Shop BD teams to capture growth opportunities</li>
-                            <li>Built automated data systems &rarr; reduced manual work and accelerated reporting</li>
-                            <li>Made data-driven decisions, tracked performance by KPIs</li>
+                            <li data-i18n="exp.ev1">Managed full operations: ordering, supply optimization, product listing, pricing, promotions, and advertising</li>
+                            <li data-i18n="exp.ev2">Collaborated with Shopee &amp; TikTok Shop BD teams to capture growth opportunities</li>
+                            <li data-i18n="exp.ev3">Built automated data systems → reduced manual work and accelerated reporting</li>
+                            <li data-i18n="exp.ev4">Made data-driven decisions, tracked performance by KPIs</li>
                         </ul>
                         <div class="tl-results">
-                            <div class="result-chip"><i class="fas fa-arrow-trend-up"></i> Q4/2025: ~11% growth</div>
+                            <div class="result-chip"><i class="fas fa-arrow-trend-up"></i> <span data-i18n="exp.r1">Q4/2025: ~11% growth</span></div>
                             <div class="result-chip highlight"><i class="fas fa-rocket"></i> Q1/2026: +24.99% Shopee</div>
                             <div class="result-chip"><i class="fas fa-arrow-trend-up"></i> Q1/2026: +18.03% TikTok Shop</div>
                         </div>
@@ -225,7 +226,7 @@
                             <div class="tl-image-wrap">
                                 <img src="assets/bycamcam-growth.jpg" alt="Q1 MoM Growth Data - Team D BYCAMCAM">
                             </div>
-                            <span class="tl-image-caption"><i class="fas fa-chart-line"></i> MoM Growth Data Q1/2026</span>
+                            <span class="tl-image-caption"><i class="fas fa-chart-line"></i> <span data-i18n="exp.caption">MoM Growth Data Q1/2026</span></span>
                         </div>
                         <div class="tl-tags">
                             <span>Shopee</span><span>TikTok Shop</span><span>Data Analytics</span><span>Team Lead</span>
@@ -233,7 +234,6 @@
                     </div>
                 </div>
 
-                <!-- Meta Ecom Group -->
                 <div class="tl-item">
                     <div class="tl-dot"></div>
                     <div class="tl-card">
@@ -245,11 +245,11 @@
                             <span class="tl-date">05/2024 &ndash; 04/2025</span>
                         </div>
                         <ul class="tl-list">
-                            <li>Supported 50+ TikTok Shop sellers with platform policies</li>
-                            <li>Handled violation appeals and registered Key Livestream for sellers</li>
-                            <li>Booked and collaborated with KOL/KOC influencers</li>
-                            <li>Built and optimized storefront operations</li>
-                            <li>Organized Mega Livestream and Super Day Livestream events</li>
+                            <li data-i18n="exp.me1">Supported 50+ TikTok Shop sellers with platform policies</li>
+                            <li data-i18n="exp.me2">Handled violation appeals and registered Key Livestream for sellers</li>
+                            <li data-i18n="exp.me3">Booked and collaborated with KOL/KOC influencers</li>
+                            <li data-i18n="exp.me4">Built and optimized storefront operations</li>
+                            <li data-i18n="exp.me5">Organized Mega Livestream and Super Day Livestream events</li>
                         </ul>
                         <div class="tl-tags">
                             <span>TikTok Shop Partner</span><span>KOL/KOC</span><span>Livestream</span><span>Seller Support</span>
@@ -265,7 +265,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">04 &mdash; Achievements</span>
-                <h2 class="section-title">Achievements</h2>
+                <h2 class="section-title" data-i18n="ach.title">Achievements</h2>
             </div>
             <div class="achievements-grid">
                 <div class="ach-card ach-gold ach-has-img">
@@ -274,16 +274,16 @@
                         <div class="ach-image-overlay"></div>
                     </div>
                     <div class="ach-body">
-                        <div class="ach-rank"><i class="fas fa-trophy"></i><span>Champion</span></div>
+                        <div class="ach-rank"><i class="fas fa-trophy"></i><span data-i18n="ach.champion">Champion</span></div>
                         <h3>I-STARTUP 2025</h3>
-                        <p class="ach-org">Investment Faculty &mdash; National Economics University</p>
+                        <p class="ach-org" data-i18n="ach.istartup_org">Investment Faculty — National Economics University</p>
                         <ul>
-                            <li>RePaws project &mdash; sustainable pet care from pineapple husks</li>
-                            <li>Built B2B, D2C, and B2C business models</li>
-                            <li>Product testing via TikTok Shop</li>
+                            <li data-i18n="ach.is1">RePaws project — sustainable pet care from pineapple husks</li>
+                            <li data-i18n="ach.is2">Built B2B, D2C, and B2C business models</li>
+                            <li data-i18n="ach.is3">Product testing via TikTok Shop</li>
                         </ul>
                         <span class="ach-date">05/2025</span>
-                        <a href="https://drive.google.com/file/d/1OZUm6jktoIK5Mukfit5xIES2eazU961o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="ach-more"><span>More</span><i class="fas fa-arrow-right"></i></a>
+                        <a href="https://drive.google.com/file/d/1OZUm6jktoIK5Mukfit5xIES2eazU961o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="ach-more"><span data-i18n="ach.more">More</span><i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -293,12 +293,12 @@
                         <div class="ach-image-overlay"></div>
                     </div>
                     <div class="ach-body">
-                        <div class="ach-rank"><i class="fas fa-medal"></i><span>3rd Runner-up</span></div>
+                        <div class="ach-rank"><i class="fas fa-medal"></i><span data-i18n="ach.runnerup">3rd Runner-up</span></div>
                         <h3>The E-Biz 2023</h3>
-                        <p class="ach-org">Business Breakthrough Competition</p>
+                        <p class="ach-org" data-i18n="ach.ebiz_org">Business Breakthrough Competition</p>
                         <ul>
-                            <li>Planned cosmetics business on Lazada marketplace</li>
-                            <li>Launched, operated, and optimized the online store</li>
+                            <li data-i18n="ach.eb1">Planned cosmetics business on Lazada marketplace</li>
+                            <li data-i18n="ach.eb2">Launched, operated, and optimized the online store</li>
                         </ul>
                         <span class="ach-date">03/2024</span>
                     </div>
@@ -306,12 +306,12 @@
 
                 <div class="ach-card">
                     <div class="ach-body">
-                        <div class="ach-rank"><i class="fas fa-award"></i><span>Consolation Prize</span></div>
-                        <h3>Digital Business &mdash; VECOM</h3>
-                        <p class="ach-org">Vietnam E-Commerce Association</p>
+                        <div class="ach-rank"><i class="fas fa-award"></i><span data-i18n="ach.consolation">Consolation Prize</span></div>
+                        <h3 data-i18n="ach.vecom_title">Digital Business — VECOM</h3>
+                        <p class="ach-org" data-i18n="ach.vecom_org">Vietnam E-Commerce Association</p>
                         <ul>
-                            <li>Online Selling category</li>
-                            <li>Cosmetics business on Lazada marketplace</li>
+                            <li data-i18n="ach.vc1">Online Selling category</li>
+                            <li data-i18n="ach.vc2">Cosmetics business on Lazada marketplace</li>
                         </ul>
                         <span class="ach-date">03/2024</span>
                     </div>
@@ -323,12 +323,12 @@
                         <div class="ach-image-overlay"></div>
                     </div>
                     <div class="ach-body">
-                        <div class="ach-rank"><i class="fas fa-star"></i><span>Scholarship</span></div>
-                        <h3>Academic Scholarship</h3>
-                        <p class="ach-org">School of Business Administration &mdash; NEU</p>
+                        <div class="ach-rank"><i class="fas fa-star"></i><span data-i18n="ach.scholarship">Scholarship</span></div>
+                        <h3 data-i18n="ach.scholarship_title">Academic Scholarship</h3>
+                        <p class="ach-org" data-i18n="ach.scholarship_org">School of Business Administration — NEU</p>
                         <ul>
-                            <li>Excellence (2023 &ndash; 2024)</li>
-                            <li>Merit (2024 &ndash; 2025)</li>
+                            <li data-i18n="ach.sc1">Excellence (2023 – 2024)</li>
+                            <li data-i18n="ach.sc2">Merit (2024 – 2025)</li>
                         </ul>
                         <span class="ach-date">2023 &ndash; 2025</span>
                     </div>
@@ -342,7 +342,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">05 &mdash; Projects</span>
-                <h2 class="section-title">Projects</h2>
+                <h2 class="section-title" data-i18n="proj.title">Projects</h2>
             </div>
             <div class="projects-grid">
                 <div class="proj-card">
@@ -352,21 +352,21 @@
                     </div>
                     <div class="proj-body">
                         <span class="proj-category">Research</span>
-                        <h3>University-Level Scientific Research</h3>
-                        <p>Topic: The impact of E-Commerce on impulse buying behavior of young households in Vietnam.</p>
+                        <h3 data-i18n="proj.nckh_title">University-Level Scientific Research</h3>
+                        <p data-i18n="proj.nckh_desc">Topic: The impact of E-Commerce on impulse buying behavior of young households in Vietnam.</p>
                         <div class="proj-meta"><i class="far fa-calendar"></i> 10/2024 &ndash; 10/2025</div>
-                        <div class="proj-tags"><span>Research</span><span>E-Commerce</span><span>Consumer Behavior</span></div>
+                        <div class="proj-tags"><span data-i18n="proj.tag_research">Research</span><span>E-Commerce</span><span data-i18n="proj.tag_behavior">Consumer Behavior</span></div>
                     </div>
                 </div>
 
                 <div class="proj-card">
                     <div class="proj-visual"><i class="fas fa-heart"></i></div>
                     <div class="proj-body">
-                        <span class="proj-category">Community</span>
-                        <h3>Givelove &mdash; Typhoon Yagi Relief</h3>
-                        <p>Built a fundraising website to support communities affected by Typhoon Yagi. A meaningful social impact project.</p>
+                        <span class="proj-category" data-i18n="proj.cat_community">Community</span>
+                        <h3 data-i18n="proj.yagi_title">Givelove — Typhoon Yagi Relief</h3>
+                        <p data-i18n="proj.yagi_desc">Built a fundraising website to support communities affected by Typhoon Yagi. A meaningful social impact project.</p>
                         <div class="proj-meta"><i class="far fa-calendar"></i> 08/2024 &ndash; 10/2024</div>
-                        <div class="proj-tags"><span>Website</span><span>Social Impact</span><span>Typhoon Relief</span></div>
+                        <div class="proj-tags"><span>Website</span><span data-i18n="proj.tag_social">Social Impact</span><span data-i18n="proj.tag_typhoon">Typhoon Relief</span></div>
                     </div>
                 </div>
 
@@ -377,8 +377,8 @@
                     </div>
                     <div class="proj-body">
                         <span class="proj-category">Startup</span>
-                        <h3>RePaws &mdash; Sustainable Pet Care</h3>
-                        <p>Eco-friendly pet care brand made from pineapple husks. B2B, D2C, B2C business model. I-STARTUP 2025 Champion.</p>
+                        <h3 data-i18n="proj.repaws_title">RePaws — Sustainable Pet Care</h3>
+                        <p data-i18n="proj.repaws_desc">Eco-friendly pet care brand made from pineapple husks. B2B, D2C, B2C business model. I-STARTUP 2025 Champion.</p>
                         <div class="proj-meta"><i class="far fa-calendar"></i> 2025</div>
                         <div class="proj-tags"><span>Startup</span><span>TikTok Shop</span><span>B2B/D2C/B2C</span></div>
                     </div>
@@ -392,15 +392,15 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">06 &mdash; Leadership</span>
-                <h2 class="section-title">Leadership &amp; Activities</h2>
+                <h2 class="section-title" data-i18n="act.title">Leadership &amp; Activities</h2>
             </div>
             <div class="activities-list">
                 <div class="act-card act-featured">
                     <div class="act-featured-layout">
                         <div class="act-featured-text">
-                            <div class="act-badge">Vice President</div>
-                            <h3>ECC E-Commerce Club &mdash; NEU</h3>
-                            <p class="act-org">Sponsored by School of Trade &amp; International Economics &mdash; NEU and Vietnam E-Commerce Association (VECOM)</p>
+                            <div class="act-badge" data-i18n="act.vp">Vice President</div>
+                            <h3 data-i18n="act.ecc_title">ECC E-Commerce Club — NEU</h3>
+                            <p class="act-org" data-i18n="act.ecc_org">Sponsored by School of Trade &amp; International Economics — NEU and Vietnam E-Commerce Association (VECOM)</p>
                             <p class="act-period"><i class="far fa-calendar"></i> 10/2024 &ndash; 10/2025</p>
                         </div>
                         <div class="act-gallery">
@@ -416,19 +416,19 @@
 
                 <div class="act-row">
                     <div class="act-card">
-                        <div class="act-badge">Vice Organizer</div>
+                        <div class="act-badge" data-i18n="act.vice_org">Vice Organizer</div>
                         <h3>E-BattleField 2025</h3>
-                        <p>The first and largest cross-border e-commerce competition in Northern Vietnam</p>
+                        <p data-i18n="act.bf_desc">The first and largest cross-border e-commerce competition in Northern Vietnam</p>
                     </div>
                     <div class="act-card">
-                        <div class="act-badge">Vice Organizer</div>
+                        <div class="act-badge" data-i18n="act.vice_org2">Vice Organizer</div>
                         <h3>E-Connect 2025</h3>
-                        <p>Event series connecting the E-Commerce community</p>
+                        <p data-i18n="act.ec_desc">Event series connecting the E-Commerce community</p>
                     </div>
                     <div class="act-card">
-                        <div class="act-badge">Event Lead</div>
+                        <div class="act-badge" data-i18n="act.event_lead">Event Lead</div>
                         <h3>Ecomathon SEA 2024</h3>
-                        <p>Competition organized by TikTok for Business, Meta Ecom, and Ecomdy Media</p>
+                        <p data-i18n="act.em_desc">Competition organized by TikTok for Business, Meta Ecom, and Ecomdy Media</p>
                     </div>
                 </div>
             </div>
@@ -440,11 +440,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">07 &mdash; Contact</span>
-                <h2 class="section-title">Get in Touch</h2>
+                <h2 class="section-title" data-i18n="ct.title">Get in Touch</h2>
             </div>
             <div class="contact-layout">
                 <div class="contact-left">
-                    <p class="contact-intro">Interested in collaboration, opportunities, or just want to connect? I'm always open to hearing from you!</p>
+                    <p class="contact-intro" data-i18n="ct.intro">Interested in collaboration, opportunities, or just want to connect? I'm always open to hearing from you!</p>
                     <div class="contact-cards">
                         <a href="mailto:tbinh.cc@gmail.com" class="ct-card">
                             <i class="fas fa-envelope"></i>
@@ -452,22 +452,22 @@
                         </a>
                         <a href="tel:0352430981" class="ct-card">
                             <i class="fas fa-phone"></i>
-                            <div><span class="ct-label">Phone</span><span class="ct-value">+84 352-430-981</span></div>
+                            <div><span class="ct-label" data-i18n="ct.phone">Phone</span><span class="ct-value">+84 352-430-981</span></div>
                         </a>
                         <div class="ct-card">
                             <i class="fas fa-map-marker-alt"></i>
-                            <div><span class="ct-label">Location</span><span class="ct-value">Hanoi, Vietnam</span></div>
+                            <div><span class="ct-label" data-i18n="ct.location">Location</span><span class="ct-value" data-i18n="ct.address">Hanoi, Vietnam</span></div>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form" onsubmit="handleSubmit(event)">
                     <div class="form-row">
-                        <div class="form-group"><label>Full Name</label><input type="text" placeholder="John Doe" required></div>
+                        <div class="form-group"><label data-i18n="ct.name">Full Name</label><input type="text" data-i18n-placeholder="ct.name_ph" placeholder="John Doe" required></div>
                         <div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com" required></div>
                     </div>
-                    <div class="form-group"><label>Subject</label><input type="text" placeholder="Collaboration / Hiring / Other"></div>
-                    <div class="form-group"><label>Message</label><textarea placeholder="Your message..." rows="5" required></textarea></div>
-                    <button type="submit" class="btn btn-primary btn-full"><span>Send Message</span><i class="fas fa-paper-plane"></i></button>
+                    <div class="form-group"><label data-i18n="ct.subject">Subject</label><input type="text" data-i18n-placeholder="ct.subject_ph" placeholder="Collaboration / Hiring / Other"></div>
+                    <div class="form-group"><label data-i18n="ct.message">Message</label><textarea data-i18n-placeholder="ct.message_ph" placeholder="Your message..." rows="5" required></textarea></div>
+                    <button type="submit" class="btn btn-primary btn-full"><span data-i18n="ct.send">Send Message</span><i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>
