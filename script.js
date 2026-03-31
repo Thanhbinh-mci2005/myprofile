@@ -277,12 +277,41 @@ window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// === Scroll fade-in animation ===
+// === Staggered scroll animations ===
+
+// Groups: elements that should stagger together (siblings in a grid/list)
+const staggerGroups = [
+    { selector: '.skills-grid .skill-card', delay: 100 },
+    { selector: '.achievements-grid .ach-card', delay: 120 },
+    { selector: '.projects-grid .proj-card', delay: 120 },
+    { selector: '.act-row .act-card', delay: 100 },
+    { selector: '.cert-row .cert-chip', delay: 80 },
+    { selector: '.contact-cards .ct-card', delay: 100 },
+];
+
+// Assign stagger delay as CSS custom property per group
+staggerGroups.forEach(({ selector, delay }) => {
+    document.querySelectorAll(selector).forEach((el, i) => {
+        el.style.setProperty('--stagger', `${i * delay}ms`);
+    });
+});
+
+// All individually animated elements
 const fadeEls = document.querySelectorAll(
-    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card'
+    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card, .section-header, .about-portrait, .gpa-table, .edu-gallery'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-up'));
+
+// Timeline items get incremental stagger
+document.querySelectorAll('.tl-item').forEach((el, i) => {
+    el.style.setProperty('--stagger', `${i * 150}ms`);
+});
+
+// Education cards stagger
+document.querySelectorAll('.edu-card').forEach((el, i) => {
+    el.style.setProperty('--stagger', `${i * 100}ms`);
+});
 
 const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -291,7 +320,7 @@ const fadeObserver = new IntersectionObserver((entries) => {
             fadeObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
 fadeEls.forEach(el => fadeObserver.observe(el));
 
