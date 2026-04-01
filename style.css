@@ -109,13 +109,42 @@ img { max-width: 100%; display: block; }
     background-size: 64px 64px;
 }
 
+/* === Section Background Images === */
+.section-has-bg, .hero { position: relative; overflow: hidden; }
+.section-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background-size: cover; background-position: center;
+    opacity: 0.06; filter: grayscale(40%) blur(2px);
+    transform: scale(1.05);
+}
+.section-bg-overlay {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(
+        180deg,
+        var(--bg) 0%,
+        rgba(10,10,15,0.85) 30%,
+        rgba(10,10,15,0.85) 70%,
+        var(--bg) 100%
+    );
+}
+.section-has-bg > .container,
+.hero-content,
+.scroll-hint { position: relative; z-index: 2; }
+
 /* === HERO === */
 .hero {
-    position: relative; min-height: 100vh; display: flex; align-items: center;
-    padding: 100px 0 60px; overflow: hidden;
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 100px 0 60px;
 }
-.hero-bg-grid { display: none; }
-.hero-glow { display: none; }
+.hero > .section-bg { opacity: 0.08; filter: grayscale(30%) blur(1px); }
+.hero > .section-bg-overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(10,10,15,0.7) 0%,
+        rgba(10,10,15,0.8) 50%,
+        var(--bg) 100%
+    );
+}
 .hero-content { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 60px; width: 100%; }
 .hero-text { flex: 1; }
 .hero-badge {
