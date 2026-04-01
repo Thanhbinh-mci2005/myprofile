@@ -239,8 +239,29 @@ img { max-width: 100%; display: block; }
 @keyframes float2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 @keyframes float3 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
+/* Scroll photo strip */
+.scroll-photos {
+    position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 8px; z-index: 2;
+    padding: 6px; border-radius: 16px;
+    background: rgba(10,10,15,0.5); backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+}
+.scroll-photos img {
+    width: 56px; height: 56px; object-fit: cover; border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    opacity: 0.7; transition: all var(--transition);
+    filter: grayscale(20%);
+}
+.scroll-photos img:hover {
+    opacity: 1; transform: scale(1.12) translateY(-4px);
+    filter: grayscale(0%);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border-color: var(--primary);
+}
+
 .scroll-hint {
-    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
     display: flex; flex-direction: column; align-items: center; gap: 8px;
     color: var(--text-secondary); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px;
 }
@@ -693,6 +714,8 @@ img { max-width: 100%; display: block; }
     .nav-toggle { display: flex; }
 
     .hero { padding-top: 100px; }
+    .scroll-photos img { width: 44px; height: 44px; border-radius: 8px; }
+    .scroll-photos { gap: 6px; padding: 5px; bottom: 70px; }
     .hero-name .line { font-size: 2.8rem; }
     .hero-metrics { gap: 16px; }
     .metric-value { font-size: 1.4rem; }
