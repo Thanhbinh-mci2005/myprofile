@@ -12,6 +12,15 @@
 </head>
 <body>
 
+    <!-- Global Background System -->
+    <div class="bg-layer">
+        <div class="bg-noise"></div>
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+        <div class="bg-glow bg-glow-3"></div>
+        <div class="bg-grid"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -50,8 +59,8 @@
                     <span class="line">Đỗ Thanh</span>
                     <span class="line accent">Bình</span>
                 </h1>
-                <p class="hero-tagline">E-Commerce Operations &bull; Data-Driven Strategy &bull; Startup Champion</p>
-                <p class="hero-desc" data-i18n="hero.desc">Digital Business Management student at National Economics University, passionate about e-commerce operations and data-driven strategy.</p>
+                <p class="hero-tagline">E-Commerce Operations &bull; Data Analytics &bull; Business Strategy</p>
+                <p class="hero-desc" data-i18n="hero.desc">3rd-year Digital Business student at NEU with a strong foundation in data analytics for e-commerce operations. Aspiring Data Analyst focused on Business &amp; E-commerce Analytics.</p>
 
                 <div class="hero-metrics">
                     <div class="metric">
@@ -108,9 +117,9 @@
                         <img src="assets/about-portrait.jpg" alt="Do Thanh Binh receiving research award at NEU">
                         <div class="about-portrait-overlay"></div>
                     </div>
-                    <p class="about-lead" data-i18n="about.lead">I'm <strong>Do Thanh Binh</strong>, a Digital Business Management student at National Economics University (NEU), Hanoi.</p>
-                    <p data-i18n="about.p1">With over 2 years of experience in E-Commerce, I have worked at Everred Group and Meta Ecom Group — specializing in Shopee & TikTok Shop operations and building data-driven growth strategies.</p>
-                    <p data-i18n="about.p2">I'm focused on deepening my expertise in e-commerce operations and data analytics, always seeking opportunities to create real value through digital business.</p>
+                    <p class="about-lead" data-i18n="about.lead">I'm <strong>Do Thanh Binh</strong>, a 3rd-year Digital Business student at National Economics University (NEU) with a strong foundation in data analytics for e-commerce.</p>
+                    <p data-i18n="about.p1">With experience designing and operating data systems for business analysis and decision-making at Everred Group and Meta Ecom Group, I specialize in Shopee &amp; TikTok Shop operations powered by data-driven strategies.</p>
+                    <p data-i18n="about.p2">I'm pursuing a career as a Data Analyst focused on Business &amp; E-commerce Analytics.</p>
                 </div>
 
                 <div class="about-side">
@@ -160,19 +169,24 @@
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-store"></i></div>
-                    <h3>E-Commerce Operations</h3>
-                    <p data-i18n="skills.ecom">Managing Shopee &amp; TikTok Shop storefronts. Product listing, pricing, promotions, and advertising.</p>
+                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3 data-i18n="skills.h_analytics">Data Analytics</h3>
+                    <p data-i18n="skills.analytics">Advanced Google Sheets — automated reporting systems. Data cleaning, transformation &amp; aggregation. KPI evaluation, dashboard building &amp; data visualization.</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
-                    <h3>Data-Driven Decision</h3>
-                    <p data-i18n="skills.data">Analyzing business KPIs, building automated data systems, and making decisions backed by data.</p>
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3 data-i18n="skills.h_tools">Tools &amp; Languages</h3>
+                    <p data-i18n="skills.tools">SQL (MySQL) — queries, joins, aggregation. HTML, CSS, PHP. SQLite, MongoDB (basic). Power BI (basic). SPSS &amp; SmartPLS for research.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-store"></i></div>
+                    <h3>E-Commerce Operations</h3>
+                    <p data-i18n="skills.ecom">Managing Shopee &amp; TikTok Shop storefronts. Product listing, pricing, promotions, advertising. Analyzing Traffic → CTR → Conversion Rate.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-bullhorn"></i></div>
                     <h3>Digital Marketing</h3>
-                    <p data-i18n="skills.marketing">Running ads, booking KOL/KOC partnerships, organizing Mega Livestream and Super Day events.</p>
+                    <p data-i18n="skills.marketing">Running ads, booking 100+ KOL/KOC partnerships, organizing Mega Livestream and Super Day events.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-users"></i></div>
@@ -183,11 +197,6 @@
                     <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
                     <h3>Business Planning</h3>
                     <p data-i18n="skills.business">Building B2B, D2C, and B2C business models. Planning and executing startup ventures.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
-                    <h3>Office &amp; Tools</h3>
-                    <p data-i18n="skills.office">MOS Excel (871), MOS Word (962). Proficient with e-commerce selling &amp; seller support tools.</p>
                 </div>
             </div>
         </div>
@@ -212,10 +221,10 @@
                             <span class="tl-date">06/2025 &ndash; 04/2026</span>
                         </div>
                         <ul class="tl-list">
-                            <li data-i18n="exp.ev1">Managed full operations: ordering, supply optimization, product listing, pricing, promotions, and advertising</li>
-                            <li data-i18n="exp.ev2">Collaborated with Shopee &amp; TikTok Shop BD teams to capture growth opportunities</li>
-                            <li data-i18n="exp.ev3">Built automated data systems → reduced manual work and accelerated reporting</li>
-                            <li data-i18n="exp.ev4">Made data-driven decisions, tracked performance by KPIs</li>
+                            <li data-i18n="exp.ev1">Designed and automated operational data systems on Google Sheets — built data processing pipelines (source → transform → data-driven decisions), reducing ~60% manual reporting time</li>
+                            <li data-i18n="exp.ev2">Evaluated business performance (Traffic → CTR → Conversion Rate), combined with time-series trend analysis to identify fluctuation causes and propose pricing, promotions &amp; catalog adjustments</li>
+                            <li data-i18n="exp.ev3">Mined data across 600+ products with 5,000+ SKUs, segmented by performance to identify top &amp; underperforming products, optimized catalog and budget allocation</li>
+                            <li data-i18n="exp.ev4">Contributed to outstanding growth in Q4/2025 (avg 11%) and Q1/2026 (24.99% on Shopee, 18.03% on TikTok Shop)</li>
                         </ul>
                         <div class="tl-results">
                             <div class="result-chip"><i class="fas fa-arrow-trend-up"></i> <span data-i18n="exp.r1">Q4/2025: ~11% growth</span></div>
@@ -245,11 +254,10 @@
                             <span class="tl-date">05/2024 &ndash; 04/2025</span>
                         </div>
                         <ul class="tl-list">
-                            <li data-i18n="exp.me1">Supported 50+ TikTok Shop sellers with platform policies</li>
-                            <li data-i18n="exp.me2">Handled violation appeals and registered Key Livestream for sellers</li>
-                            <li data-i18n="exp.me3">Booked and collaborated with KOL/KOC influencers</li>
-                            <li data-i18n="exp.me4">Built and optimized storefront operations</li>
-                            <li data-i18n="exp.me5">Organized Mega Livestream and Super Day Livestream events</li>
+                            <li data-i18n="exp.me1">Operated and optimized Shopee &amp; TikTok Shop storefronts for fashion brands (MunMiu, Calie.vn, Gago, etc.)</li>
+                            <li data-i18n="exp.me2">Booked and collaborated with 100+ KOLs/KOCs</li>
+                            <li data-i18n="exp.me3">Supported 50+ TikTok Shop sellers via TSP network: platform policies, violation appeals, Key Livestream registration</li>
+                            <li data-i18n="exp.me4">Organized successful Mega Livestream &amp; Super Day events (80% hit platform KPIs, sellers averaged 8.5% growth in Q4/2024)</li>
                         </ul>
                         <div class="tl-tags">
                             <span>TikTok Shop Partner</span><span>KOL/KOC</span><span>Livestream</span><span>Seller Support</span>
@@ -307,11 +315,11 @@
                 <div class="ach-card">
                     <div class="ach-body">
                         <div class="ach-rank"><i class="fas fa-award"></i><span data-i18n="ach.consolation">Consolation Prize</span></div>
-                        <h3 data-i18n="ach.vecom_title">Digital Business — VECOM</h3>
-                        <p class="ach-org" data-i18n="ach.vecom_org">Vietnam E-Commerce Association</p>
+                        <h3 data-i18n="ach.vecom_title">Online Selling — Digital Business Competition</h3>
+                        <p class="ach-org" data-i18n="ach.vecom_org">Vietnam E-Commerce Association — VECOM</p>
                         <ul>
-                            <li data-i18n="ach.vc1">Online Selling category</li>
-                            <li data-i18n="ach.vc2">Cosmetics business on Lazada marketplace</li>
+                            <li data-i18n="ach.vc1">Planned functional food e-commerce business</li>
+                            <li data-i18n="ach.vc2">1-month results: 9.1M VND revenue, 30+ hours livestream, 55k+ reach</li>
                         </ul>
                         <span class="ach-date">03/2024</span>
                     </div>
@@ -346,15 +354,26 @@
             </div>
             <div class="projects-grid">
                 <div class="proj-card">
+                    <div class="proj-visual"><i class="fas fa-flask"></i></div>
+                    <div class="proj-body">
+                        <span class="proj-category">Research</span>
+                        <h3 data-i18n="proj.nckh2_title">Employer Branding Research (Competition Entry)</h3>
+                        <p data-i18n="proj.nckh2_desc">Topic: Impact of content source on employer attractiveness, mediated by perceived authenticity. Experimental study with 200 samples using SPSS &amp; SmartPLS. Applied ANOVA and mediation analysis.</p>
+                        <div class="proj-meta"><i class="far fa-calendar"></i> 10/2025 &ndash; 03/2026</div>
+                        <div class="proj-tags"><span>SPSS</span><span>SmartPLS</span><span>ANOVA</span><span data-i18n="proj.tag_experiment">Experimental</span></div>
+                    </div>
+                </div>
+
+                <div class="proj-card">
                     <div class="proj-visual has-img">
                         <img src="assets/nckh-report.jpg" alt="University-level Scientific Research Report">
                         <div class="proj-img-overlay"></div>
                     </div>
                     <div class="proj-body">
-                        <span class="proj-category">Research</span>
+                        <span class="proj-category">Research &bull; <span data-i18n="proj.nckh_prize">3rd Prize</span></span>
                         <h3 data-i18n="proj.nckh_title">University-Level Scientific Research</h3>
                         <p data-i18n="proj.nckh_desc">Topic: The impact of E-Commerce on impulse buying behavior of young households in Vietnam.</p>
-                        <div class="proj-meta"><i class="far fa-calendar"></i> 10/2024 &ndash; 10/2025</div>
+                        <div class="proj-meta"><i class="far fa-calendar"></i> 10/2024 &ndash; 03/2025</div>
                         <div class="proj-tags"><span data-i18n="proj.tag_research">Research</span><span>E-Commerce</span><span data-i18n="proj.tag_behavior">Consumer Behavior</span></div>
                     </div>
                 </div>
