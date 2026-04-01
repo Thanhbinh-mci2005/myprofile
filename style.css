@@ -458,6 +458,17 @@ img { max-width: 100%; display: block; }
 .act-org { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 4px; }
 .act-period { font-size: 0.82rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; }
 .act-period i { color: var(--primary); }
+.act-link {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+    padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 600;
+    color: var(--primary-light); background: rgba(37,99,235,0.06);
+    border: 1px solid rgba(37,99,235,0.15); transition: all var(--transition);
+}
+.act-link:hover {
+    background: rgba(37,99,235,0.12); border-color: var(--primary);
+    transform: translateY(-1px);
+}
+.act-link i { font-size: 0.85rem; }
 
 .act-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .act-row .act-card {
