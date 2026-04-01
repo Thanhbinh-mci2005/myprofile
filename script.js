@@ -356,7 +356,7 @@ function handleSubmit(e) {
     const original = btn.innerHTML;
     const sentText = translations[currentLang]['ct.sent'];
     btn.innerHTML = `<i class="fas fa-check"></i> ${sentText}`;
-    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+    btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
     setTimeout(() => {
         btn.innerHTML = original;
         btn.style.background = '';
