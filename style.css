@@ -358,6 +358,32 @@ img { max-width: 100%; display: block; }
 .tl-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tl-tags span { font-size: 0.75rem; padding: 4px 12px; border-radius: 50px; background: rgba(37,99,235,0.06); color: var(--primary-light); font-weight: 500; }
 
+/* Timeline & Project Links */
+.tl-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.tl-link {
+    display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px;
+    border-radius: 50px; font-size: 0.82rem; font-weight: 600;
+    color: var(--accent); background: rgba(16,185,129,0.06);
+    border: 1px solid rgba(16,185,129,0.15); transition: all var(--transition);
+}
+.tl-link:hover {
+    background: rgba(16,185,129,0.12); border-color: var(--accent);
+    transform: translateY(-1px); box-shadow: 0 4px 15px rgba(16,185,129,0.1);
+}
+.tl-link i { font-size: 0.75rem; }
+.proj-links { margin-top: 14px; }
+.proj-link {
+    display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px;
+    border-radius: 50px; font-size: 0.8rem; font-weight: 600;
+    color: var(--primary-light); background: rgba(37,99,235,0.06);
+    border: 1px solid rgba(37,99,235,0.15); transition: all var(--transition);
+}
+.proj-link:hover {
+    background: rgba(37,99,235,0.12); border-color: var(--primary);
+    transform: translateY(-1px);
+}
+.proj-link i { font-size: 0.7rem; }
+
 /* === ACHIEVEMENTS === */
 .achievements-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .ach-card {
