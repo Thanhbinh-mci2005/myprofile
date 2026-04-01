@@ -11,7 +11,7 @@ const translations = {
         // Hero
         "hero.desc": "3rd-year Digital Business student at NEU with a strong foundation in data analytics for e-commerce operations. Aspiring Data Analyst focused on Business & E-commerce Analytics.",
         "hero.exp": "Years of Experience",
-        "hero.sellers": "Sellers Supported",
+        "hero.growth": "Shopee Growth",
         "hero.contact": "Contact Me",
         "hero.learn": "Learn More",
         // About
@@ -129,7 +129,7 @@ const translations = {
         // Hero
         "hero.desc": "Sinh viên năm 3 chuyên ngành Digital Business tại NEU với nền tảng phân tích dữ liệu trong vận hành e-commerce. Định hướng trở thành Data Analyst tập trung vào Business & E-commerce Analytics.",
         "hero.exp": "Năm kinh nghiệm",
-        "hero.sellers": "Sellers hỗ trợ",
+        "hero.growth": "Tăng trưởng Shopee",
         "hero.contact": "Liên hệ",
         "hero.learn": "Tìm hiểu thêm",
         // About
