@@ -44,11 +44,17 @@ body {
     color: var(--text);
     line-height: 1.7; overflow-x: hidden; letter-spacing: -0.01em;
 }
+body::before {
+    content: '';
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background: linear-gradient(135deg, rgba(245,247,250,0.85), rgba(228,236,247,0.8));
+}
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.hero, .section, .footer { position: relative; z-index: 1; }
 
 /* === Navbar === */
 .navbar {
