@@ -34,8 +34,13 @@
 html { scroll-behavior: smooth; }
 body {
     font-family: var(--font);
-    background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+    background-image: url('assets/portrait-event.jpg'), url('assets/repaws-winner.jpg'), url('assets/repaws-stage.jpg'), url('assets/repaws-celebration.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: rgba(255,255,255,0.7);
+    background-blend-mode: lighten;
     color: var(--text);
     line-height: 1.7; overflow-x: hidden; letter-spacing: -0.01em;
 }
