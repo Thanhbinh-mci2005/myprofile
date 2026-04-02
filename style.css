@@ -34,7 +34,7 @@
 html { scroll-behavior: smooth; }
 body {
     font-family: var(--font);
-    background-image: url('assets/portrait-event.jpg'), url('assets/repaws-winner.jpg'), url('assets/repaws-stage.jpg'), url('assets/repaws-celebration.jpg');
+    background-image: url('assets/portrait-event.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
