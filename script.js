@@ -359,6 +359,120 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// === Floating Particles ===
+(function() {
+    const canvas = document.getElementById('particles');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let w, h, particles = [];
+
+    function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight * 3;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    for (let i = 0; i < 60; i++) {
+        particles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: Math.random() * 2.5 + 0.5,
+            dx: (Math.random() - 0.5) * 0.3,
+            dy: (Math.random() - 0.5) * 0.3,
+            opacity: Math.random() * 0.3 + 0.05,
+        });
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(6,182,212,${p.opacity})`;
+            ctx.fill();
+            p.x += p.dx;
+            p.y += p.dy;
+            if (p.x < 0 || p.x > w) p.dx *= -1;
+            if (p.y < 0 || p.y > h) p.dy *= -1;
+        });
+        requestAnimationFrame(draw);
+    }
+    draw();
+})();
+
+// === Typewriter Effect ===
+(function() {
+    const el = document.getElementById('typewriter');
+    if (!el) return;
+    const phrases = [
+        'E-Commerce Operations',
+        'Data Analytics',
+        'Business Strategy',
+        'Startup Champion',
+        'Team Leadership',
+    ];
+    let phraseIdx = 0, charIdx = 0, deleting = false;
+
+    function type() {
+        const current = phrases[phraseIdx];
+        if (!deleting) {
+            el.textContent = current.slice(0, charIdx + 1);
+            charIdx++;
+            if (charIdx === current.length) {
+                deleting = true;
+                setTimeout(type, 2000);
+                return;
+            }
+            setTimeout(type, 60);
+        } else {
+            el.textContent = current.slice(0, charIdx - 1);
+            charIdx--;
+            if (charIdx === 0) {
+                deleting = false;
+                phraseIdx = (phraseIdx + 1) % phrases.length;
+                setTimeout(type, 400);
+                return;
+            }
+            setTimeout(type, 30);
+        }
+    }
+    setTimeout(type, 800);
+})();
+
+// === Counter Animation for Metrics ===
+(function() {
+    const counters = document.querySelectorAll('.metric-value');
+    const observed = new Set();
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !observed.has(entry.target)) {
+                observed.add(entry.target);
+                const el = entry.target;
+                const text = el.textContent.trim();
+                const match = text.match(/^([+]?)([\d.]+)(%?)$/);
+                if (!match) return;
+                const prefix = match[1], target = parseFloat(match[2]), suffix = match[3];
+                const isDecimal = text.includes('.');
+                const duration = 1500;
+                const start = performance.now();
+
+                function step(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const val = target * eased;
+                    el.textContent = prefix + (isDecimal ? val.toFixed(2) : Math.round(val)) + suffix;
+                    if (progress < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => counterObserver.observe(c));
+})();
+
 // === Contact form handler ===
 function handleSubmit(e) {
     e.preventDefault();
