@@ -389,7 +389,8 @@ window.addEventListener('scroll', () => {
         particles.forEach(p => {
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(6,182,212,${p.opacity})`;
+            const colors = ['99,102,241', '6,182,212', '236,72,153'];
+            ctx.fillStyle = `rgba(${colors[Math.floor(p.x + p.y) % 3]},${p.opacity})`;
             ctx.fill();
             p.x += p.dx;
             p.y += p.dy;
