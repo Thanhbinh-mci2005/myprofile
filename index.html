@@ -113,8 +113,11 @@
                 <span class="section-tag">01 &mdash; About</span>
                 <h2 class="section-title" data-i18n="about.title">About Me</h2>
             </div>
-            <div class="about-grid">
-                <div class="about-main">
+
+            <!-- Bento Grid Layout -->
+            <div class="bento-grid">
+                <!-- Main bio card - spans 2 cols -->
+                <div class="bento-card bento-wide">
                     <div class="about-portrait">
                         <img src="assets/about-portrait.jpg" alt="Do Thanh Binh receiving research award at NEU">
                         <div class="about-portrait-overlay"></div>
@@ -124,7 +127,9 @@
                     <p data-i18n="about.p2">I'm pursuing a career as a Data Analyst focused on Business &amp; E-commerce Analytics.</p>
                 </div>
 
-                <div class="about-side">
+                <!-- Education card -->
+                <div class="bento-card">
+                    <div class="bento-card-header"><i class="fas fa-graduation-cap"></i><span data-i18n="about.edu_label">Education</span></div>
                     <div class="edu-card">
                         <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
                         <div class="edu-body">
@@ -141,21 +146,33 @@
                             <p class="edu-detail">2020 &ndash; 2023</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="edu-gallery">
-                        <img src="assets/edu-certificate.jpg" alt="Academic Excellence Certificate - NEU Business School">
-                        <img src="assets/edu-outdoor.jpg" alt="Receiving academic achievement award">
-                    </div>
-
+                <!-- GPA highlight card -->
+                <div class="bento-card bento-accent">
+                    <div class="bento-big-number">3.88<span>/4.0</span></div>
+                    <p class="bento-big-label">GPA</p>
                     <div class="gpa-table">
                         <img src="assets/gpa-transcript.png" alt="Academic GPA Transcript - Cumulative GPA 3.88/4.0">
                         <span class="gpa-table-caption"><i class="fas fa-graduation-cap"></i> <span data-i18n="edu.gpa_caption">Academic Transcript — Cumulative GPA: 3.88/4.0 (9.09/10)</span></span>
                     </div>
+                </div>
 
+                <!-- Certificates card -->
+                <div class="bento-card">
+                    <div class="bento-card-header"><i class="fas fa-certificate"></i><span data-i18n="about.cert_label">Certificates</span></div>
                     <div class="cert-row">
                         <div class="cert-chip"><i class="fas fa-language"></i><div><span class="cert-name">IELTS</span><span class="cert-score">6.0</span></div></div>
                         <div class="cert-chip"><i class="fas fa-file-excel"></i><div><span class="cert-name">MOS Excel</span><span class="cert-score">871</span></div></div>
                         <div class="cert-chip"><i class="fas fa-file-word"></i><div><span class="cert-name">MOS Word</span><span class="cert-score">962</span></div></div>
+                    </div>
+                </div>
+
+                <!-- Photo gallery card -->
+                <div class="bento-card bento-gallery">
+                    <div class="edu-gallery">
+                        <img src="assets/edu-certificate.jpg" alt="Academic Excellence Certificate - NEU Business School">
+                        <img src="assets/edu-outdoor.jpg" alt="Receiving academic achievement award">
                     </div>
                 </div>
             </div>

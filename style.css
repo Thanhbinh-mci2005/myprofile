@@ -294,11 +294,52 @@ img { max-width: 100%; display: block; }
 @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 .section-title { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; letter-spacing: -0.04em; color: var(--text); }
 
-/* === ABOUT === */
-.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: start; }
-.about-main p { color: var(--text-secondary); margin-bottom: 16px; font-size: 0.95rem; line-height: 1.8; }
-.about-lead { font-size: 1.05rem !important; color: var(--text) !important; }
-.about-lead strong { color: var(--primary-light); }
+/* === ABOUT — Bento Grid === */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    grid-auto-rows: auto;
+}
+.bento-card {
+    padding: 28px; border-radius: var(--radius);
+    background: var(--surface); border: 1px solid var(--border);
+    backdrop-filter: blur(8px); transition: all var(--transition);
+    overflow: hidden;
+}
+.bento-card:hover { border-color: rgba(99,102,241,0.15); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.bento-wide { grid-column: span 2; }
+.bento-card-header {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--primary); margin-bottom: 16px;
+}
+.bento-card-header i { font-size: 0.85rem; }
+
+/* GPA highlight card */
+.bento-accent {
+    background: linear-gradient(135deg, rgba(99,102,241,0.06), rgba(6,182,212,0.04));
+    border-color: rgba(99,102,241,0.12);
+}
+.bento-big-number {
+    font-family: var(--font-display); font-size: 3.2rem; font-weight: 800;
+    letter-spacing: -0.04em; line-height: 1;
+    background: var(--gradient-cool);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;
+    margin-bottom: 4px;
+}
+.bento-big-number span { font-size: 1.2rem; font-weight: 500; }
+.bento-big-label { font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; margin-bottom: 16px; }
+
+/* Gallery bento card */
+.bento-gallery { padding: 0; }
+.bento-gallery .edu-gallery { margin: 0; gap: 0; grid-template-columns: 1fr 1fr; height: 100%; }
+.bento-gallery .edu-gallery img { height: 100%; min-height: 200px; border-radius: 0; border: none; border-right: 1px solid var(--border); }
+.bento-gallery .edu-gallery img:last-child { border-right: none; }
+
+.bento-card p { color: var(--text-secondary); margin-bottom: 12px; font-size: 0.92rem; line-height: 1.75; }
+.about-lead { font-size: 1.02rem !important; color: var(--text) !important; }
+.about-lead strong { color: var(--primary); }
 
 /* Education Cards */
 .edu-card {
@@ -674,6 +715,8 @@ img { max-width: 100%; display: block; }
     .hero-metrics { gap: 16px; }
     .metric-value { font-size: 1.4rem; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .bento-grid { grid-template-columns: 1fr 1fr; }
+    .bento-wide { grid-column: span 2; }
     .about-portrait { height: 240px; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .achievements-grid { grid-template-columns: 1fr; }
@@ -690,6 +733,9 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 480px) {
+    .bento-grid { grid-template-columns: 1fr; }
+    .bento-wide { grid-column: span 1; }
+    .bento-big-number { font-size: 2.4rem; }
     .hero-name .line { font-size: 2.2rem; }
     .hero-metrics { flex-direction: column; gap: 12px; }
     .metric-divider { width: 40px; height: 1px; }

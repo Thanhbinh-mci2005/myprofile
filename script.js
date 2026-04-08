@@ -25,6 +25,8 @@ const translations = {
         "edu.scholarship": "Excellence & Merit Scholarship",
         "edu.hs": "Tran Phu Gifted High School",
         "edu.gpa_caption": "Academic Transcript — Cumulative GPA: 3.88/4.0 (9.09/10)",
+        "about.edu_label": "Education",
+        "about.cert_label": "Certificates",
         // Skills
         "skills.title": "Skills",
         "skills.h_analytics": "Data Analytics",
@@ -143,6 +145,8 @@ const translations = {
         "edu.scholarship": "Học bổng Xuất sắc & Giỏi",
         "edu.hs": "THPT Chuyên Trần Phú",
         "edu.gpa_caption": "Bảng điểm học tập — GPA tích luỹ: 3.88/4.0 (9.09/10)",
+        "about.edu_label": "Học vấn",
+        "about.cert_label": "Chứng chỉ",
         // Skills
         "skills.title": "Kỹ năng",
         "skills.h_analytics": "Phân tích dữ liệu",
@@ -307,6 +311,7 @@ const staggerGroups = [
     { selector: '.act-row .act-card', delay: 100 },
     { selector: '.cert-row .cert-chip', delay: 80 },
     { selector: '.contact-cards .ct-card', delay: 100 },
+    { selector: '.bento-grid .bento-card', delay: 100 },
 ];
 
 // Assign stagger delay as CSS custom property per group
@@ -318,7 +323,7 @@ staggerGroups.forEach(({ selector, delay }) => {
 
 // All individually animated elements
 const fadeEls = document.querySelectorAll(
-    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card, .section-header, .about-portrait, .gpa-table, .edu-gallery'
+    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card, .section-header, .about-portrait, .gpa-table, .edu-gallery, .bento-card'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-up'));
