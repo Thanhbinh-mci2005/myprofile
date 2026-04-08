@@ -186,33 +186,34 @@
                 <span class="section-tag">02 &mdash; Skills</span>
                 <h2 class="section-title" data-i18n="skills.title">Skills</h2>
             </div>
-            <div class="skills-grid">
-                <div class="skill-card">
+            <div class="bento-grid">
+                <!-- Featured skill - spans 2 cols -->
+                <div class="bento-card bento-wide bento-accent skill-card">
                     <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
                     <h3 data-i18n="skills.h_analytics">Data Analytics</h3>
                     <p data-i18n="skills.analytics">Advanced Google Sheets — automated reporting systems. Data cleaning, transformation &amp; aggregation. KPI evaluation, dashboard building &amp; data visualization.</p>
                 </div>
-                <div class="skill-card">
+                <div class="bento-card skill-card">
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3 data-i18n="skills.h_tools">Tools &amp; Languages</h3>
                     <p data-i18n="skills.tools">SQL (MySQL) — queries, joins, aggregation. HTML, CSS, PHP. SQLite, MongoDB (basic). Power BI (basic). SPSS &amp; SmartPLS for research.</p>
                 </div>
-                <div class="skill-card">
+                <div class="bento-card skill-card">
                     <div class="skill-icon"><i class="fas fa-store"></i></div>
                     <h3>E-Commerce Operations</h3>
                     <p data-i18n="skills.ecom">Managing Shopee &amp; TikTok Shop storefronts. Product listing, pricing, promotions, advertising. Analyzing Traffic → CTR → Conversion Rate.</p>
                 </div>
-                <div class="skill-card">
+                <div class="bento-card skill-card">
                     <div class="skill-icon"><i class="fas fa-bullhorn"></i></div>
                     <h3>Digital Marketing</h3>
                     <p data-i18n="skills.marketing">Running ads, booking 100+ KOL/KOC partnerships, organizing Mega Livestream and Super Day events.</p>
                 </div>
-                <div class="skill-card">
+                <div class="bento-card skill-card">
                     <div class="skill-icon"><i class="fas fa-users"></i></div>
                     <h3>Team Leadership</h3>
                     <p data-i18n="skills.leadership">Operations team leader, club vice president, and event lead for large-scale competitions.</p>
                 </div>
-                <div class="skill-card">
+                <div class="bento-card skill-card">
                     <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
                     <h3>Business Planning</h3>
                     <p data-i18n="skills.business">Building B2B, D2C, and B2C business models. Planning and executing startup ventures.</p>
@@ -228,9 +229,10 @@
                 <span class="section-tag">03 &mdash; Experience</span>
                 <h2 class="section-title" data-i18n="exp.title">Experience</h2>
             </div>
-            <div class="timeline">
-                <div class="tl-item">
-                    <div class="tl-dot"></div>
+            <div class="exp-grid">
+                <!-- Featured experience - full width -->
+                <div class="exp-card exp-featured">
+                    <div class="exp-card-accent"></div>
                     <div class="tl-card">
                         <div class="tl-header">
                             <div>
@@ -266,8 +268,8 @@
                     </div>
                 </div>
 
-                <div class="tl-item">
-                    <div class="tl-dot"></div>
+                <!-- Second experience -->
+                <div class="exp-card">
                     <div class="tl-card">
                         <div class="tl-header">
                             <div>
@@ -287,6 +289,14 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Impact stats row -->
+                <div class="exp-stats">
+                    <div class="exp-stat"><span class="exp-stat-number">~60%</span><span class="exp-stat-label" data-i18n="exp.stat1">Less Manual Work</span></div>
+                    <div class="exp-stat"><span class="exp-stat-number">600+</span><span class="exp-stat-label" data-i18n="exp.stat2">Products Managed</span></div>
+                    <div class="exp-stat"><span class="exp-stat-number">100+</span><span class="exp-stat-label" data-i18n="exp.stat3">KOLs/KOCs</span></div>
+                    <div class="exp-stat"><span class="exp-stat-number">50+</span><span class="exp-stat-label" data-i18n="exp.stat4">Sellers Supported</span></div>
+                </div>
             </div>
         </div>
     </section>
@@ -298,25 +308,28 @@
                 <span class="section-tag">04 &mdash; Achievements</span>
                 <h2 class="section-title" data-i18n="ach.title">Achievements</h2>
             </div>
-            <div class="achievements-grid">
-                <div class="ach-card ach-gold ach-has-img">
-                    <div class="ach-image">
-                        <img src="assets/repaws-award.jpg" alt="Winning I-STARTUP 2025 Championship">
-                        <div class="ach-image-overlay"></div>
-                    </div>
-                    <div class="ach-body">
-                        <div class="ach-rank"><i class="fas fa-trophy"></i><span data-i18n="ach.champion">Champion</span></div>
-                        <h3>I-STARTUP 2025</h3>
-                        <p class="ach-org" data-i18n="ach.istartup_org">Investment Faculty — National Economics University</p>
-                        <ul>
-                            <li data-i18n="ach.is1">RePaws project — sustainable pet care from pineapple husks</li>
-                            <li data-i18n="ach.is2">Built B2B, D2C, and B2C business models</li>
-                            <li data-i18n="ach.is3">Product testing via TikTok Shop</li>
-                        </ul>
-                        <span class="ach-date">05/2025</span>
-                        <a href="https://drive.google.com/file/d/1OZUm6jktoIK5Mukfit5xIES2eazU961o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="ach-more"><span data-i18n="ach.more">More</span><i class="fas fa-arrow-right"></i></a>
-                    </div>
+            <!-- Featured Champion Showcase -->
+            <div class="ach-showcase">
+                <div class="ach-showcase-image">
+                    <img src="assets/repaws-award.jpg" alt="Winning I-STARTUP 2025 Championship">
+                    <div class="ach-image-overlay"></div>
                 </div>
+                <div class="ach-showcase-content">
+                    <div class="ach-rank"><i class="fas fa-trophy"></i><span data-i18n="ach.champion">Champion</span></div>
+                    <h3>I-STARTUP 2025</h3>
+                    <p class="ach-org" data-i18n="ach.istartup_org">Investment Faculty — National Economics University</p>
+                    <ul>
+                        <li data-i18n="ach.is1">RePaws project — sustainable pet care from pineapple husks</li>
+                        <li data-i18n="ach.is2">Built B2B, D2C, and B2C business models</li>
+                        <li data-i18n="ach.is3">Product testing via TikTok Shop</li>
+                    </ul>
+                    <span class="ach-date">05/2025</span>
+                    <a href="https://drive.google.com/file/d/1OZUm6jktoIK5Mukfit5xIES2eazU961o/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="ach-more"><span data-i18n="ach.more">More</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Other achievements in grid -->
+            <div class="achievements-grid" style="margin-top: 20px;">
 
                 <div class="ach-card ach-has-img">
                     <div class="ach-image">

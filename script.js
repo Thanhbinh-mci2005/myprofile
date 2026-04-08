@@ -47,6 +47,10 @@ const translations = {
         "exp.r1": "Q4/2025: ~11% growth",
         "exp.caption": "MoM Growth Data Q1/2026",
         "exp.demo": "Demo Data System",
+        "exp.stat1": "Less Manual Work",
+        "exp.stat2": "Products Managed",
+        "exp.stat3": "KOLs/KOCs",
+        "exp.stat4": "Sellers Supported",
         "exp.me1": "Operated and optimized Shopee & TikTok Shop storefronts for fashion brands (MunMiu, Calie.vn, Gago, etc.)",
         "exp.me2": "Booked and collaborated with 100+ KOLs/KOCs",
         "exp.me3": "Supported 50+ TikTok Shop sellers via TSP network: platform policies, violation appeals, Key Livestream registration",
@@ -167,6 +171,10 @@ const translations = {
         "exp.r1": "Q4/2025: ~11% tăng trưởng",
         "exp.caption": "Dữ liệu tăng trưởng MoM Q1/2026",
         "exp.demo": "Demo hệ thống dữ liệu",
+        "exp.stat1": "Giảm thao tác thủ công",
+        "exp.stat2": "Sản phẩm quản lý",
+        "exp.stat3": "KOLs/KOCs",
+        "exp.stat4": "Sellers hỗ trợ",
         "exp.me1": "Vận hành và tối ưu gian hàng Shopee, TikTok Shop cho các brand thời trang (MunMiu, Calie.vn, Gago...)",
         "exp.me2": "Booking và làm việc với 100+ KOLs/KOCs",
         "exp.me3": "Hỗ trợ 50+ nhà bán hàng TikTokShop trong mạng lưới TSP: chính sách sàn, kháng cáo vi phạm, đăng ký Key Livestream",
@@ -312,6 +320,7 @@ const staggerGroups = [
     { selector: '.cert-row .cert-chip', delay: 80 },
     { selector: '.contact-cards .ct-card', delay: 100 },
     { selector: '.bento-grid .bento-card', delay: 100 },
+    { selector: '.exp-stats .exp-stat', delay: 80 },
 ];
 
 // Assign stagger delay as CSS custom property per group
@@ -323,7 +332,7 @@ staggerGroups.forEach(({ selector, delay }) => {
 
 // All individually animated elements
 const fadeEls = document.querySelectorAll(
-    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card, .section-header, .about-portrait, .gpa-table, .edu-gallery, .bento-card'
+    '.skill-card, .tl-item, .ach-card, .proj-card, .act-card, .act-featured, .edu-card, .cert-chip, .ct-card, .section-header, .about-portrait, .gpa-table, .edu-gallery, .bento-card, .exp-card, .exp-stat, .ach-showcase'
 );
 
 fadeEls.forEach(el => el.classList.add('fade-up'));
