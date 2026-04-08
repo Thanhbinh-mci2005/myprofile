@@ -403,7 +403,7 @@ window.addEventListener('scroll', () => {
         particles.forEach(p => {
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            const colors = ['99,102,241', '6,182,212', '236,72,153'];
+            const colors = ['126,184,224', '125,216,196', '120,136,160'];
             ctx.fillStyle = `rgba(${colors[Math.floor(p.x + p.y) % 3]},${p.opacity})`;
             ctx.fill();
             p.x += p.dx;
@@ -495,7 +495,7 @@ function handleSubmit(e) {
     const original = btn.innerHTML;
     const sentText = translations[currentLang]['ct.sent'];
     btn.innerHTML = `<i class="fas fa-check"></i> ${sentText}`;
-    btn.style.background = '#10b981';
+    btn.style.background = '#7dd8c4';
     setTimeout(() => {
         btn.innerHTML = original;
         btn.style.background = '';
