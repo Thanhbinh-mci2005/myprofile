@@ -3,6 +3,7 @@ const translations = {
     en: {
         // Nav
         "nav.about": "About",
+        "nav.skills": "Skills",
         "nav.experience": "Experience",
         "nav.achievements": "Achievements",
         "nav.projects": "Projects",
@@ -127,6 +128,7 @@ const translations = {
     vi: {
         // Nav
         "nav.about": "Giới thiệu",
+        "nav.skills": "Kỹ năng",
         "nav.experience": "Kinh nghiệm",
         "nav.achievements": "Thành tích",
         "nav.projects": "Dự án",
